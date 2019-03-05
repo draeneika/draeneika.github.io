@@ -1,2 +1,5 @@
 name: Lucia Leličová
 markdown: kramdown
+collections:
+  schools:
+    output: true
