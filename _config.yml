@@ -3,3 +3,9 @@ markdown: kramdown
 collections:
   schools:
     output: true
+  skills:
+    output: true
+  jobs:
+    output: true
+plugins:
+  - jemoji

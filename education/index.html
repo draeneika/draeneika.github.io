@@ -6,15 +6,22 @@ title: Education
 
 <h1>{{page.title}}</h1>
 
-<div class="education">
-	<ul>
+<div class="mt-4">
   	{% for school in site.schools %}
-		<h3>{{school.name}}</h3>
-		<p>
-        <b>{{ school.study_programme }}</b>
-         </p>
+  	<div class="card mb-3">
+  		<div class="card-body">
+			<h3>{{school.name}}</h3>
+			<p>
+	        	<b> Study programme: </b> {{ school.study_programme | date:  "%B %Y" }}
+	        </p>
+	        <p>
+	        	<b> Curriculum: </b> {{ school.curriculum | date:  "%B %Y" }}
+	        </p>
+	        <p>
+	        	<b> {{ school.from | date:  "%B %Y" }} - {{ school.until | date:  "%B %Y" }} </b>
+	        </p>
+  		</div>
+  	</div>
   	{% endfor %}
-	</ul>
-
 </div>
 
