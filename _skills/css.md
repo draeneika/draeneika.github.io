@@ -1,4 +1,4 @@
 ---
 name: "CSS"
-emoji: "⭐⭐"
+emoji: "⭐⭐☆☆☆"
 ---

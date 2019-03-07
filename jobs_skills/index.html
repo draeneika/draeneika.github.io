@@ -10,8 +10,8 @@ title2: Skills
   	{% for job in site.jobs %}
   	<div class="card mb-3">
   		<div class="card-body">
-			<h3>{{job.company_name}}</h3>
-			<p>
+	       <h3>{{job.company_name}}</h3>
+			     <p>
 	        	<b> Department: </b> {{ job.department }}
 	        </p>
 	        <p>
@@ -20,13 +20,15 @@ title2: Skills
 	        <p>
 	        	<b> {{ job.from | date:  "%B %Y" }} - {{ job.until | date:  "%B %Y" }} </b>
 	        </p>
+
   		</div>
   	</div>
   	{% endfor %}
 </div>
 <h1>{{ page.title2 }}</h1>
 <div class="mt-4">
-  	{% for skill in site.skills %}
+    {% assign sorted_skills = site.skills | sort: "name" %}
+  	{% for skill in sorted_skills %}
   	<div class="card mb-3">
   		<div class="card-body">
 			<b>{{skill.name}}</b> {{skill.emoji}} 

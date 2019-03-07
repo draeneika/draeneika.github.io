@@ -1,4 +1,4 @@
 ---
 name: "HTML"
-emoji: "⭐⭐⭐"
+emoji: "⭐⭐⭐☆☆"
 ---

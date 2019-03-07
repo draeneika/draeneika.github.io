@@ -1,4 +1,4 @@
 ---
 name: "PL/SQL"
-emoji: "⭐⭐⭐"
+emoji: "⭐⭐⭐☆☆"
 ---

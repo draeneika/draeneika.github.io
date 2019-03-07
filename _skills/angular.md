@@ -1,4 +1,4 @@
 ---
 name: "Angular"
-emoji: "⭐⭐⭐"
+emoji: "⭐⭐⭐☆☆"
 ---

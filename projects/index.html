@@ -1,8 +1,59 @@
 ---
 layout: default
-title: Projects
+title: Zadania
 ---
 
 
 <h1>{{page.title}}</h1>
+
+<div class="mt-4">
+  	<div class="card mb-3">
+  		<div class="card-body">
+  			<h3>Zadanie 1</h3>
+  			<p>
+          <b>5 podstránok: </b> Home, About, Education, Jobs & Skills, Webové publikovanie
+  	    </p>
+        <p>
+          <b>3 layouts: </b> default, right_photo
+        </p>
+        <p> 
+          <b>5 premenných:</b> skills + atribúty, jobs + atribúty, schools+ atribúty, sorted_skills
+        </p>
+        <p>
+          <b>kolekcie:</b> _schools, _skills, _jobs
+        </p>
+        <p>
+          <b>plugin:</b> <a href="https://github.com/jekyll/jemoji">jemoji</a>
+        </p>
+        <p><b>taspoň 5 filtrov alebo tagov:</b></p>
+        <p>
+          <b>tagy:</b>
+          <p> 1.) {% raw  %} {% for job in site.jobs %} {% endraw %}</p>
+          <p> 2.) {% raw  %} {% include navigation.html %} {% endraw %}</p>   
+          <p> 3.) {% raw  %} {% assign sorted_skills = site.skills | sort: "name" %} {% endraw %}</p> 
+          <p> 4.) raw       
+        <p>
+        <p>
+          <b>filtre:</b> 
+          <p> 1.) {% raw  %} {{job.from | date:  "%B %Y" }} {% endraw %} </p>
+          <p> 2.) {% raw  %}{% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} </p>
+        </p>      
+  		</div>
+  	</div>
+  	<div class="card mb-3">
+  		<div class="card-body">
+  			<h3>Zadanie 2</h3>
+  			<p>
+  	    </p>
+  		</div>
+  	</div>
+  	<div class="card mb-3">
+    	<div class="card-body">
+    		<h3>Zadanie 3</h3>
+    		<p>
+    	  </p>
+  		</div>
+  	</div>
+</div>
+
 
