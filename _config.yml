@@ -7,5 +7,7 @@ collections:
     output: true
   jobs:
     output: true
+  webtoons:
+    output: true
 plugins:
   - jemoji

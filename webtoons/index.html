@@ -1,0 +1,24 @@
+---
+layout: cards
+title: Favorite Webtoons
+---
+
+{% for webtoon in site.webtoons %}
+
+	  		<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="{{webtoon.image}}">
+	  			<div class="card-body">
+						<h3 class="card-title">{{webtoon.title}}</h3>
+						<p>
+							<b>Genre:</b> {{webtoon.genre}}
+				        </p>
+				        <p>
+							<b>Creator:</b> {{webtoon.creator}}
+				        </p>
+						<p>
+							<b>Description:</b> {{webtoon.description}}
+				        </p>
+				        <a href="{{webtoon.web}}" class="btn btn-primary">Start reading</a>
+			    </div>
+	  		</div>
+{% endfor %}

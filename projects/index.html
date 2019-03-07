@@ -28,15 +28,15 @@ title: Zadania
         <p><b>taspoň 5 filtrov alebo tagov:</b></p>
         <p>
           <b>tagy:</b>
-          <p> 1.) {% raw  %} {% for job in site.jobs %} {% endraw %}</p>
-          <p> 2.) {% raw  %} {% include navigation.html %} {% endraw %}</p>   
-          <p> 3.) {% raw  %} {% assign sorted_skills = site.skills | sort: "name" %} {% endraw %}</p> 
-          <p> 4.) raw       
+          <p> 1.) {% raw  %} {% for job in site.jobs %} {% endraw %}</p> - loopovanie kolekciou
+          <p> 2.) {% raw  %} {% include navigation.html %} {% endraw %}</p>  - 
+          <p> 3.) {% raw  %} {% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} - vytvorenie novej premennej</p> 
+          <p> 4.) raw  - na escaping   
         <p>
         <p>
           <b>filtre:</b> 
-          <p> 1.) {% raw  %} {{job.from | date:  "%B %Y" }} {% endraw %} </p>
-          <p> 2.) {% raw  %}{% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} </p>
+          <p> 1.) {% raw  %} {{job.from | date:  "%B %Y" }} {% endraw %} - na zobrazenie dátumu v tvare Mesiac Rok </p>
+          <p> 2.) {% raw  %}{% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} -zoradenie pola abecedne podla atributu name</p> 
         </p>      
   		</div>
   	</div>
