@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Jobs & Skilss
+title: Jobs & Skills
 ---
 
 
@@ -8,17 +8,15 @@ title: Jobs & Skilss
 {% for job in site.jobs %}
 <div class="card mb-3">
   <div class="card-header">
-<!--     <h3 class="card-title">{{job.company_name}}</h3> -->
  <a href="{{job.web}}"> <img src="{{job.image}}" class="mb-0 p-0" style="width: 150px;"></a>
   </div>
   <div class="card-body">
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><p class="card-text"> <b> Department: </b> {{ job.department }}</p></li>
-          <li class="list-group-item"><p class="card-text"><b> Position: </b> {{ job.position }}</p></li>
-        <li class="list-group-item"> <p class="card-text">           <b> {{ job.from | date:  "%B %Y" }} - {{ job.until | date:  "%B %Y" }} </b></p></li>
+          <li class="list-group-item"><p class="card-text"> <b> Position: </b> {{ job.position }}</p></li>
+        <li class="list-group-item"> <p class="card-text"> <b> {{ job.from | date:  "%B %Y" }} - {{ job.until | date:  "%B %Y" }} </b></p></li>
       </ul>
       </div>
-
 </div>
 {% endfor %}
 
