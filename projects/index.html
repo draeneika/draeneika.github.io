@@ -3,57 +3,124 @@ layout: default
 title: Zadania
 ---
 
-
-<h1>{{page.title}}</h1>
-
 <div class="mt-4">
   	<div class="card mb-3">
+      <div class="card-header">
+          <h3 class="display-4" style="font-size:40px;">Zadanie 1: Osobná webová prezentácia na GitHub pages</h3> 
+
+      </div>
   		<div class="card-body">
-  			<h3>Zadanie 1</h3>
-  			<p>
-          <b>5 podstránok: </b> Home, About, Education, Jobs & Skills, Webové publikovanie
-  	    </p>
-        <p>
-          <b>3 layouts: </b> default, right_photo
-        </p>
-        <p> 
-          <b>5 premenných:</b> skills + atribúty, jobs + atribúty, schools+ atribúty, sorted_skills
-        </p>
-        <p>
-          <b>kolekcie:</b> _schools, _skills, _jobs
-        </p>
-        <p>
-          <b>plugin:</b> <a href="https://github.com/jekyll/jemoji">jemoji</a>
-        </p>
-        <p><b>taspoň 5 filtrov alebo tagov:</b></p>
-        <p>
-          <b>tagy:</b>
-          <p> 1.) {% raw  %} {% for job in site.jobs %} {% endraw %}</p> - loopovanie kolekciou
-          <p> 2.) {% raw  %} {% include navigation.html %} {% endraw %}</p>  - 
-          <p> 3.) {% raw  %} {% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} - vytvorenie novej premennej</p> 
-          <p> 4.) raw  - na escaping   
-        <p>
-        <p>
-          <b>filtre:</b> 
-          <p> 1.) {% raw  %} {{job.from | date:  "%B %Y" }} {% endraw %} - na zobrazenie dátumu v tvare Mesiac Rok </p>
-          <p> 2.) {% raw  %}{% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} -zoradenie pola abecedne podla atributu name</p> 
-        </p>      
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <p class="card-text">
+          <h5>Zadanie:</h5>
+          Vytvorte webovú prezentáciu (webové sídlo) o sebe. Zamerajte sa jednak na vaše profesné záujmy (napr. projekty, ktoré riešite/riešili ste, čo vás v informatike najviac baví, fascinuje = váš developerský profil) a jednak vaše osobné záujmy, hobby.
+
+V rámci developerského profilu vytvorte sekciu Webové publikovanie, kde budete publikovať všetky tri vaše vypracované zadania z predmetu.
+
+Využite pritom technológie Git + GitHub Pages + Jekyll + Markdown. Využite potenciál statického generátora Jekyll a jeho templatovacích možností.</p> </li>
+
+        <li class="list-group-item">
+          <p class="card-text">
+          <h5 >Podrobné požiadavky na vypracovanie a odovzdanie zadania (priemerná úroveň kvality):</h5>
+          <ul>
+            <li>Sídlo musí obsahovať aspoň 5 podstránok, pri využití aspoň 3 rôznych rozložení (layout-ov)</li>
+            <li>V rámci šablon musí byť použité:
+              <ul> 
+                <li>aspoň 5 premenných</li>
+                <li>kolekcie alebo dátové súbory</li>
+                <li>aspoň 5 filtrov alebo tagov</li>
+                <li>aspoň 1 plugin (okrem pagination)</li>
+              </ul>
+            </li>
+          </ul>
+          </p> 
+        </li>
+
+
+        <li class="list-group-item">
+          <p class="card-text">
+            <h5 >Dokumentácia</h5>
+          <ul>
+            <li><b>5 podstránok: </b>
+              <ol>
+                <li>Home</li>
+                <li>About</li>
+                <li>Education</li>
+                <li>Jobs & Skills</li>
+                <li>Favorite Webtoons</li>
+                <li>Webové publikovanie</li>
+              </ol>
+            </li>
+        <li><b>3 layouts: </b>
+          <ol>
+            <li>default</li>
+            <li>right_photo</li>
+            <li>cards</li>
+          </ol>
+        </li>
+        <li><b>5 premenných:</b>
+          <ol>
+            <li>skills + atribúty</li>
+            <li>jobs + atribúty</li>
+            <li>webtoons + atribúty</li>
+            <li>shools + atribúty</li>
+            <li>sorted_skills</li>
+          </ol>    
+        </li>
+        <li><b>kolekcie:</b>
+            <ol>
+            <li>_schools</li>
+            <li>_jobs</li>
+            <li>_skills</li>
+            <li>_webtoons</li>
+          </ol>
+        </li>
+        <li> <b>plugin:</b>
+            <ul>
+            <li><a href="https://github.com/jekyll/jemoji">jemoji</a></li>
+          </ul>
+        </li>
+        <li><b>taspoň 5 filtrov alebo tagov:</b>
+          <ul>
+            <li><b>tagy:</b>
+            <ol>
+              <li>{% raw  %} {% for job in site.jobs %} {% endraw %}</li>
+              <li>{% raw  %} {% include navigation.html %} {% endraw %}</li>
+              <li>{% raw  %} {% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} - vytvorenie novej premennej</li>
+              <li>raw  - na escaping</li>
+            </ol>
+            </li>
+            <li><b>filtre:</b></li>
+            <ol>
+            <li> {% raw  %} {{job.from | date:  "%B %Y" }} {% endraw %} - na zobrazenie dátumu v tvare Mesiac Rok</li>
+            <li>{% raw  %}{% assign sorted_skills = site.skills | sort: "name" %} {% endraw %} - zoradenie poľa abecedne podla atribútu name</li>
+            </ol>
+          </ul>         
+        </li>
+      </ul>
   		</div>
   	</div>
+
+
   	<div class="card mb-3">
+      <div class="card-header">
+         <h2 class="display-4" style="font-size:40px;"> Zadanie 2</h2>
+      </div>
   		<div class="card-body">
-  			<h3>Zadanie 2</h3>
   			<p>
   	    </p>
   		</div>
   	</div>
+
+
   	<div class="card mb-3">
+      <div class="card-header">
+          <h2 class="display-4" style="font-size:40px;">Zadanie 3</h2>
+      </div>
     	<div class="card-body">
-    		<h3>Zadanie 3</h3>
     		<p>
     	  </p>
   		</div>
   	</div>
 </div>
-
-

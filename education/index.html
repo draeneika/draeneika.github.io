@@ -3,25 +3,30 @@ layout: default
 title: Education
 ---
 
-
-<h1>{{page.title}}</h1>
-
-<div class="mt-4">
+</br>
   	{% for school in site.schools %}
   	<div class="card mb-3">
-  		<div class="card-body">
-			<h3>{{school.name}}</h3>
-			<p>
-	        	<b> Study programme: </b> {{ school.study_programme  }}
-	        </p>
-	        <p>
-	        	<b> Curriculum: </b> {{ school.curriculum  }}
-	        </p>
-	        <p>
-	        	<b> {{ school.from | date:  "%B %Y" }} - {{ school.until | date:  "%B %Y" }} </b>
-	        </p>
-  		</div>
-  	</div>
-  	{% endfor %}
-</div>
+  			<div class="card-header">
+  				<h3 class="display-4 card-title" style="font-size:33px; ">{{school.name}} 🎓</h3>
+  			</div>
+  			<div class="card-body">
+	  				<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+				        	<b> Study programme: </b> {{ school.study_programme  }}
+				        </li>
+				        <li class="list-group-item">
+				        	<b> Curriculum: </b> {{ school.curriculum  }}
+				        </li>
+				        <li class="list-group-item"> 
+				        	<b> {{ school.from | date:  "%B %Y" }} - {{ school.until | date:  "%B %Y" }} </b>
+				        </li>
+			        </ul>
+					<div class="text-center">
+						<a href="{{school.web}}"><img class="rounded mx-auto d-block" src="{{school.image}}"></a>
+					</div>
+		    </div>
 
+  	</div>
+
+ </br>
+ {% endfor %}

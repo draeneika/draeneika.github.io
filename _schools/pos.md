@@ -4,4 +4,6 @@ study_programme: "Secondary grammar school"
 curriculum: "Specialised mathematics class"
 from: 2011-09-01
 until: 2015-05-30
+image: "/assets/img/gympos.png"
+web: "https://www.gympos.sk"
 ---
