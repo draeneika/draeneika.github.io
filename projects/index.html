@@ -120,11 +120,141 @@ Využite pritom technológie Git + GitHub Pages + Jekyll + Markdown. Využite po
 
   	<div class="card mb-3">
       <div class="card-header">
-         <h2 class="display-4" style="font-size:40px;"> Zadanie 2</h2>
+         <h2 class="display-4" style="font-size:40px;"> Zadanie 2: Transformácia vybraného dokumentu do formátu DocBook</h2>
       </div>
   		<div class="card-body">
-  			<p>
-  	    </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p class="card-text">
+              <h5>Zadanie:</h5>
+                <p>
+                   Predmetom 2. zadania je spracovanie vybraného dokumentu (ideálne bakalárskeho projektu) z pôvodného ľubovoľného (Word, OpenOffice, LaTeX, …) formátu do formátu DocBook a vygenerovanie cieľového tvaru v PDF. Výsledný dokument bude mať rozsah minimálne 10 a maximálne 15 strán. Do rozsahu sa nezapočítavajú úvodné strany (obsah, zoznamy obrázkov a tabuliek), použitá literatúra a prílohy.
+                </p>
+              </p>
+
+            </li>
+            <li class="list-group-item">
+              <p class="card-text">
+              <h5 >Požadované a kontrolné konštrukcie sú:</h5>
+                 <ul>
+                    <li>štandardné členenie textu na kapitola, podkapitola, podpodkapitola, príloha, generovaný obsah,</li>
+                    <li>zvýraznenie slov, zvýraznenie členenia textu odrážkami alebo číslovaním,</li>
+                    <li>odkazy na iné časti vlastného dokumentu, prípadne odkazy na URL,</li>
+                    <li>poznámka pod čiarou</li>
+                    <li>zoznam použitej literatúry a zdrojov vrátane ich citácie v texte,</li>
+                    <li>vloženie obrázku a tabuliek, odkazy na ne v texte; zoznam obrázkov a tabuliek v úvode alebo závere textu,</li>
+                    <li>vytvorenie registra pojmov (indexu) s pojmami hierarchicky usporiadanými do dvoch úrovni, napríklad „cykly, while“, „cykly, for“ (najmenej ako ukážku na 10-15 pojmoch na predvedenie práce s registrom).</li>
+                  </ul>
+              </p> 
+            </li>
+            <li class="list-group-item">
+              <p class="card-text">
+              <h5 >Dokumentácia riešenia:</h5>
+              <p>
+                <u>Štandartné členenie textu:</u>
+                <ul>
+                  <li>&lt;chapter&gt; - kapitola</li>
+                  <li>&lt;section&gt; - sekcia(podkapitola)</li>
+                  <li>&lt;title&gt; - nádpis</li>
+                  <li>&lt;para&gt; - odsek</li>
+                  <li>&lt;abstract&gt; - abstrakt</li>
+                  <li>&lt;apendix&gt; - prílohy na konci práce</li>
+                  <li>&lt;xsl:param name=&quot;generate.toc&quot;&gt; book    title,toc,figure,table &lt;/xsl:param&gt; - generovaný obsah</li>
+                </ul>
+              </p>
+              <p>
+                <u>Zvýraznenie slov, zvýraznenie členenia textu odrážkami alebo číslovaním:</u>
+                <ul>
+                  <li>&lt;emphasis&gt; - zvýraznenie textu (<i>italic font</i>)</li>
+                  <li> &lt;emphasis role=&quot;strong&quot;&gt; - zvýraznenie textu (<b>bold</b>)</li>
+                  <li>&lt;itemizedlist&gt; - nečíslovaný zoznam</li>
+                  <ul>
+                    <li>&lt;listitem&gt; - položka zoznamu</li>
+                  </ul>
+                </ul>
+              </p>
+              <p>
+                <u>Odkazy na iné časti vlastného dokumentu, prípadne odkazy na URL:</u>
+                <ul>
+                  <li> &lt;link linkend=&quot;colorCode&quot;&gt; - odkaz na sekciu Color coding (&lt;section id=&quot;colorCode&quot;&gt;)</li>
+                  <li> &lt;xref linkend=&quot;bib.c1&quot;/&gt; - odkaz na bibliografiu (&lt;bibliomixed id=&quot;bib.c1&quot;&gt;)</li>
+                  <li> &lt;ulink url=&quot;https://www.jointjs.com/opensource&quot;&gt;JointJS&lt;/ulink&gt; -odkaz na URL</li>
+                </ul>
+              </p>
+              <p>
+                <u>Poznámka pod čiarou:</u>
+                <ul>
+                  <li>&lt;footnote&gt; &lt;para&gt; https://www.lieberlieber.com/lemontree/en/ &lt;/para&gt; &lt;/footnote&gt;</li>
+                </ul>
+              </p>
+              <p>
+                <u>Zoznam použitej literatúry a zdrojov vrátane ich citácie v texte:</u>
+                <ul>
+                  <li>
+  <pre>
+  &lt;bibliomixed id=&quot;bib.c4&quot;&gt;
+    &lt;bibliomisc&gt;Niere, J.: &lt;/bibliomisc&gt;
+    &lt;title&gt;Visualizing differences of UML diagrams with Fujaba.&lt;/title&gt;
+    &lt;bibliomisc&gt;VolumeEditors, 2004.&lt;/bibliomisc&gt;
+  &lt;/bibliomixed&gt;</pre>
+                  </li>
+                  <li> &lt;xref linkend=&quot;bib.c4&quot;/&gt; - odkaz na bibliografiu v texte</li>
+                </ul>
+              </p>
+              <p>
+                <u>Vloženie obrázku a tabuliek, odkazy na ne v texte; zoznam obrázkov a tabuliek v úvode alebo závere textu:</u>
+                <ul>
+                  <li>Tabuľka - &lt;table id=&quot;libraries&quot; &gt;</li>
+                  <ul>
+                    <li>&lt;tgroup cols=&quot;5&quot;&gt;</li>
+                    <li>&lt;tbody&gt;</li>
+                    <li>&lt;thead&gt; </li>
+                    <li>&lt;entry&gt;</li>
+                    <li>&lt;colspec align=&quot;center&quot; /&gt;</li>
+                  </ul>
+                  <li>Obrázok</li>
+                  <ul>
+                    <li>
+                      <p>
+<pre>&lt;figure id=&quot;LemonTree&quot;&gt;
+  &lt;title&gt;Example of visualization of changes using side-by-side view with LemonTree&lt;/title&gt;
+  &lt;mediaobject&gt;
+    &lt;imageobject&gt;
+      &lt;imagedata fileref=&quot;figures/LemonTree.png&quot; width=&quot;700px&quot; /&gt;
+    &lt;/imageobject&gt;
+  &lt;/mediaobject&gt;
+&lt;/figure&gt;</pre>
+                      </p>
+                    </li>
+                  </ul>
+                  <li>odkazy v texte pomocou &lt;link&gt;</li>
+                  <li>zoznamy automaticky vygenerované &lt;xsl:param name=&quot;generate.toc&quot;&gt; book    title,toc,figure,table &lt;/xsl:param&gt; </li>
+                </ul>
+              </p>
+              <p>
+                <u>Vytvorenie registra pojmov (indexu) s pojmami hierarchicky usporiadanými do dvoch úrovni, napríklad „cykly, while“, „cykly, for“ (najmenej ako ukážku na 10-15 pojmoch na predvedenie práce s registrom):</u>
+                <ul>
+                    <li>&lt;index&gt; - register pojmov na konci práce</li>
+                    <li>&lt;indexterm&gt;&lt;primary&gt;Changes in UML diagrams&lt;/primary&gt;&lt;/indexterm&gt; - pojem v registry pojmov </li>
+                    <li>&lt;indexterm&gt;&lt;primary&gt;Changes in UML diagrams&lt;/primary&gt;&lt;secondary&gt;Structural changes&lt;/secondary&gt;&lt;/indexterm&gt; - pojem v registry pojmov v druhej úrovni</li>
+                </ul>
+              </p>
+              <p>
+                <u>Úprava šablóny (thesis.xsl):</u>
+                <ul>
+                  <li>&lt;xsl:param name=&quot;generate.toc&quot;&gt; book    title,toc,<b>figure</b>,<b>table</b> &lt;/xsl:param&gt; - generovanie zoznamu obrázkov a tabuliek</li>
+                  <li>
+                    <pre>
+&lt;fo:block xsl:use-attribute-sets=&quot;chap.title.properties&quot;&gt;
+  &lt;xsl:apply-templates select=&quot;$node&quot; mode=&quot;label.markup&quot;/&gt;
+  &lt;xsl:text&gt; &lt;/xsl:text&gt;
+  &lt;xsl:apply-templates select=&quot;$node&quot; mode=&quot;title.markup&quot;/&gt;
+&lt;/fo:block&gt; - úprava názvu kapitoly
+</pre>
+                  </li>
+                </ul>
+              </p>
+
   		</div>
   	</div>
 
