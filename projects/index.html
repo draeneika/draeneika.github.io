@@ -264,8 +264,50 @@ Využite pritom technológie Git + GitHub Pages + Jekyll + Markdown. Využite po
           <h2 class="display-4" style="font-size:40px;">Zadanie 3</h2>
       </div>
     	<div class="card-body">
-    		<p>
-    	  </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p class="card-text">
+              <h5>Zadanie:</h5>
+                <p>
+                  Analyzujte možnosti zápisu jednoduchej prezentácie v jazyku XML. Identifikujte základné súčasti prezentácie a navrhnite XML elementy pre ich označkovanie (metadátové, štrukturálne, inline). Dbajte na znovupoužiteľnosť a vyvarujte sa redundancií. Návrh elementov zrealizujte opísaním typu dokumentu pomocou vybraného jazyka (DTD, XSD, RELAX NG) spolu s vysvetlením účelu jednotlivých elementov. Vo vami navhrnutom jazyku vytvorte ukážkovú prezentáciu, ktorá bude demonštrovať možnosti tvorby prezentácií podľa definície typu dokumentu.
+
+                  Navrhnite a vytvorte XSLT šablóny pre konverziu prezentácie z XML do XHTML+CSS a pre konverziu prezentácie z XML do PDF. Klaďte dôraz na znovupoužitie jednotlivých šablon pre viaceré výstupné formáty. Umožnite zadávanie parametrov transformácií.
+
+                  Súčasťou požiadaviek na zadanie je vytvorenie správy o zadaní 3, v ktorej zdokumentujete splenie jednotlivých bodov zadania. Správa bude súčasťou vašej stránky o Webovom publikovaní na GitHube.
+                </p>
+              </p>
+
+            </li>
+            <li class="list-group-item">
+              <p class="card-text">
+              <h5 >Dokumentácia riešenia:</h5>
+              <p>
+                <u>Opis typu dokumentu (prezentacia.xml):</u>
+                <ul>
+                  <li>&lt;presentation&gt; - koreňový prvok</li>
+                  <li>&lt;slide&gt; - slide</li>
+                  <li>&lt;presentation_name&gt; - názov prezentácie</li>
+                  <li>&lt;author_name&gt; - meno autora</li>
+                  <li>&lt;title&gt; - nádpis</li>
+                  <li>&lt;paragraph&gt; - blok textu</li>
+                  <li>&lt;image&gt; - obrázok; parametre : src_path - cesta k obrázku, position (left | right | center)</li>
+                </ul>
+              </p>
+               <p>
+                <u>Návrh transformácií:</u>
+                Vytvorili sme dve transformácie trasformation_PDF.xsl a transformation_HTML.xsl. Každý element z prezentácia.xml má svoj vlastný template. Súbor configurable_options.xml obsahuje globálne nastavenia pri transformácií. 
+              </p>
+              <p>
+                <u>Nastaviteľné parametre pri transformácii (configurable_options.xml):</u>
+                <ul>
+                  <li>&lt;paginate&gt; ("yes/no")  číslovanie strán;</li>
+                  <li>&lt;font_style&gt; - typ fontu, nastaviteľné pre presentation_name, paragraph a title</li>
+                  <li>&lt;color&gt; - farba textu, nastaviteľné pre presentation_name, paragraph a title </li>
+                  <li>&lt;font_size&gt; - veľkosť textu, nastaviteľné pre paragraph a title </li>
+                </ul>
+              </p>
+          </ul>
+
   		</div>
   	</div>
 </div>
